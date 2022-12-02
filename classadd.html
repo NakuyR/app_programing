@@ -11,8 +11,11 @@
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.13.4, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|Cambay:400,400i,700,700i">
-    
-    
+        <script>
+      function input(){
+    document.form.submit();
+      }
+      </script>
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -71,36 +74,49 @@
         <div class="u-repeater u-repeater-3"></div>
       </div>
       <div class="u-form u-form-1">
-        <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
+        <form action="./php/classadd.php" method="post" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" name="form" style="padding: 10px;" enctype="multipart/form-data">
           <div class="u-form-group u-form-name">
             <label for="name-3ad6" class="u-label">수업명</label>
             <input type="text" id="name-3ad6" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="" placeholder="수업명">
           </div>
           <div class="u-form-group">
             <label for="email-3ad6" class="u-label">교수명</label>
-            <input type="text" placeholder="교수명" id="email-3ad6" name="name-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
+            <input type="text" placeholder="교수명" id="email-3ad6" name="prof" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="required">
           </div>
           <div class="u-form-group u-form-select u-form-group-3">
             <label for="select-adbc" class="u-label">시간</label>
             <div class="u-form-select-wrapper">
-              <select id="select-adbc" name="시간" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
-                <option value="1교시">1교시</option>
-                <option value="2교시">2교시</option>
-                <option value="3교시">3교시</option>
-                <option value="4교시">4교시</option>
-                <option value="5교시">5교시</option>
-                <option value="6교시">6교시</option>
-                <option value="7교시">7교시</option>
-                <option value="8교시">8교시</option>
-                <option value="9교시">9교시</option>
+              <select id="select-adbc" name="time" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                <option value="1">1교시</option>
+                <option value="2">2교시</option>
+                <option value="3">3교시</option>
+                <option value="4">4교시</option>
+                <option value="5">5교시</option>
+                <option value="6">6교시</option>
+                <option value="7">7교시</option>
+                <option value="8">8교시</option>
+                <option value="9">9교시</option>
+              </select>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
+            </div>
+          </div>
+          <div class="u-form-group u-form-select u-form-group-3">
+            <label for="select-adbcd" class="u-label">요일</label>
+            <div class="u-form-select-wrapper">
+              <select id="select-adbcd" name="day" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+                <option value="월">월</option>
+                <option value="화">화</option>
+                <option value="수">수</option>
+                <option value="목">목</option>
+                <option value="금">금</option>
               </select>
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
             </div>
           </div>
           <div class="u-align-right u-form-group u-form-submit">
-            <a href="#" class="u-active-palette-2-dark-2 u-border-none u-btn u-btn-submit u-button-style u-hover-palette-2-dark-2 u-palette-2-dark-1 u-btn-1">추가<br>
-            </a>
-            <input type="submit" value="submit" class="u-form-control-hidden">
+            <button type="button" onclick="input()" class="u-active-palette-2-dark-2 u-border-none u-btn u-btn-submit u-button-style u-hover-palette-2-dark-2 u-palette-2-dark-1 u-btn-1">추가<br>
+            </button>
+
           </div>
         </form>
       </div>
